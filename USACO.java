@@ -14,7 +14,12 @@ public class USACO{
     c = Integer.parseInt(scan.next());
     e = Integer.parseInt(scan.next());
     n = Integer.parseInt(scan.next());
-    System.out.println(r + ", " + c + ", " + e + ", " + n);
+    grid = new int[r][c];
+    for (int y = 0; y < r; y++){
+      for (int x = 0; x < c; x++){
+        grid[y][x] = Integer.parseInt(scan.next());
+      }
+    }
     return 0;
   }
 
