@@ -39,19 +39,19 @@ public class USACO{
             }
             for (int y = rs - 1; y < rs + 2; y++){
               for (int x = cs - 1; x < cs + 2; x++){
-                if (grid[y][x] == max && grid[y][x] > 0) grid[y][x]--;
+                if (grid[y][x] == max) grid[y][x]--;
               }
             }
             ds--;
           }
-          for (int[] y : grid ){
-            for (int x : y){
-              System.out.print(x + " ");
-            }
-            System.out.println();
-          }
-          System.out.println("\n");
         }
+        int total = 0;
+        for (int[] y : grid ){
+          for (int x : y){
+            if (e - x > 0) total += e - x;
+          }
+        }
+        return total * 72 * 72;
 
       }
 
